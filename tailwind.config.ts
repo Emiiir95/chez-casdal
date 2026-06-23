@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import typography from "@tailwindcss/typography";
 
 /**
  * Palette dérivée du logo Chez Casdal (orange flamme sur fond noir charbon).
@@ -55,6 +56,7 @@ const config: Config = {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         heading: ["var(--font-bebas)", "var(--font-inter)", "sans-serif"],
         display: ["var(--font-bebas)", "sans-serif"],
+        script: ["var(--font-pacifico)", "cursive"],
       },
       borderRadius: {
         "4xl": "2rem",
@@ -85,7 +87,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [typography],
 };
 
 export default config;

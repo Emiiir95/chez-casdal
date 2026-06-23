@@ -34,9 +34,16 @@ export default function Hero() {
           </span>
 
           <h1 className="mt-6 text-white font-display text-5xl leading-[0.95] tracking-wide sm:text-6xl lg:text-7xl">
-            Quand t&apos;as la <span className="text-flamme-500">dalle</span>,
+            Quand t&apos;as la{" "}
+            <span className="font-script text-flamme-500 tracking-normal">
+              Dalle
+            </span>
+            ,
             <br />
-            pense <span className="text-flamme-500">Casdal !</span>
+            pense{" "}
+            <span className="font-script text-flamme-500 tracking-normal">
+              Casdal !
+            </span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-creme-100/85">

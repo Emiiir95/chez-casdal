@@ -7,6 +7,7 @@ import Container from "@/components/atoms/Container";
 import SectionTitle from "@/components/atoms/SectionTitle";
 import Button from "@/components/atoms/Button";
 import IconBadge from "@/components/atoms/IconBadge";
+import LocationMap from "@/components/molecules/LocationMap";
 import { SITE } from "@/data/site";
 
 const CARD_CLASS =
@@ -94,6 +95,8 @@ export default function HoursAndLocation() {
             </div>
           </div>
         </div>
+
+        <LocationMap className="mt-8 rounded-4xl border border-charbon-700 bg-charbon-800 shadow-deep" />
       </Container>
     </section>
   );

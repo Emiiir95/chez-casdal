@@ -1,0 +1,45 @@
+name: Generate Blog Post Daily
+
+on:
+  schedule:
+    # 6h00 heure de Paris = 4h00 UTC (heure d'été) / 5h00 UTC (heure d'hiver).
+    # On lance à 04:00 UTC, ajuste si besoin selon ta préférence.
+    - cron: "0 4 * * *"
+  workflow_dispatch: # Permet de lancer manuellement depuis GitHub Actions
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate blog article
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npm run generate:blog
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "Casdal Blog Bot"
+          git config user.email "blog-bot@chez-casdal.fr"
+          git add content/blog/
+          if git diff --staged --quiet; then
+            echo "Aucun nouvel article à commiter."
+          else
+            DATE=$(date +%Y-%m-%d)
+            git commit -m "blog: nouvel article du ${DATE}"
+            git push
+            echo "✅ Article commité — Vercel va redéployer automatiquement."
+          fi

@@ -1,4 +1,4 @@
-import ContactForm from "@/components/molecules/ContactForm";
+import ContactForm from "@/components/organisms/forms/ContactForm";
 
 type ContactFormCardProps = {
   title?: string;

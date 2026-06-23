@@ -1,5 +1,5 @@
 import { FaUtensils as Utensils } from "react-icons/fa6";
-import Seo from "@/components/atoms/Seo";
+import Seo from "@/components/layouts/Seo";
 import Container from "@/components/atoms/Container";
 import Button from "@/components/atoms/Button";
 

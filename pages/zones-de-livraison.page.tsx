@@ -1,4 +1,4 @@
-import Seo from "@/components/atoms/Seo";
+import Seo from "@/components/layouts/Seo";
 import DeliveryZonesIntro from "@/components/organisms/DeliveryZonesIntro";
 import DeliveryCitiesGrid from "@/components/organisms/DeliveryCitiesGrid";
 import DeliverySpecialitiesByCity from "@/components/organisms/DeliverySpecialitiesByCity";

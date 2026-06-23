@@ -1,5 +1,5 @@
 import type { GetStaticPaths, GetStaticProps } from "next";
-import Seo from "@/components/atoms/Seo";
+import Seo from "@/components/layouts/Seo";
 import VilleHero from "@/components/organisms/VilleHero";
 import VilleSpecialitiesSection from "@/components/organisms/VilleSpecialitiesSection";
 import DeliveryCitiesGrid from "@/components/organisms/DeliveryCitiesGrid";

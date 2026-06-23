@@ -19,13 +19,22 @@ export default function Footer() {
       <Container className="py-16">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-1">
-            <Image
-              src={SITE.logo}
-              alt={`Logo ${SITE.name}`}
-              width={140}
-              height={140}
-              className="h-auto w-32"
-            />
+            <div className="flex items-center gap-3">
+              <Image
+                src={SITE.logo}
+                alt={`Logo ${SITE.name}`}
+                width={140}
+                height={140}
+                className="h-auto w-32"
+              />
+              <Image
+                src="/images/logo_halal.webp"
+                alt="Certifié Halal"
+                width={80}
+                height={80}
+                className="h-auto w-16"
+              />
+            </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-creme-100/70">
               {SITE.shortMission}
             </p>
@@ -52,6 +61,14 @@ export default function Footer() {
                   className="text-sm text-creme-100/80 transition-colors hover:text-flamme-400"
                 >
                   Zones de livraison
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="text-sm text-creme-100/80 transition-colors hover:text-flamme-400"
+                >
+                  Blog
                 </Link>
               </li>
             </ul>
@@ -121,7 +138,7 @@ export default function Footer() {
               {SITE.hours.map((h) => (
                 <li
                   key={h.day}
-                  className={`flex items-center justify-between gap-3 ${
+                  className={`flex items-center gap-3 md:justify-between ${
                     h.closed ? "text-creme-100/40" : "text-creme-100/80"
                   }`}
                 >
@@ -140,7 +157,24 @@ export default function Footer() {
           <p>
             © {year} {SITE.name}. Tous droits réservés.
           </p>
-          <p>SIRET : {SITE.siret}</p>
+          <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <li>
+              <Link
+                href="/mentions-legales"
+                className="transition-colors hover:text-flamme-400"
+              >
+                Mentions légales
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/politique-confidentialite"
+                className="transition-colors hover:text-flamme-400"
+              >
+                Politique de confidentialité
+              </Link>
+            </li>
+          </ul>
         </div>
       </Container>
     </footer>

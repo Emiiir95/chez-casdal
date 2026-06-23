@@ -30,7 +30,7 @@ export default function MenuSection() {
   };
 
   return (
-    <div className="bg-charbon-900">
+    <div className="bg-[#141618]">
       <Container className="pt-8">
         <MenuCategoryNav
           categories={[{ id: ALL_ID, name: "Tout", items: [] }, ...MENU]}
@@ -45,8 +45,8 @@ export default function MenuSection() {
             key={category.id}
             id={`cat-${category.id}`}
             aria-labelledby={`cat-${category.id}-title`}
-            className={`scroll-mt-40  py-16 ${
-              idx % 2 === 0 ? "bg-[#0a0a0a]" : "bg-[#141618]"
+            className={`scroll-mt-40 py-16 ${
+              idx % 2 === 0 ? "bg-[#141618]" : "bg-[#1f1f1f]"
             }`}
           >
             <Container>

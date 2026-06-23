@@ -1,4 +1,4 @@
-import Seo from "@/components/atoms/Seo";
+import Seo from "@/components/layouts/Seo";
 import Reveal from "@/components/atoms/Reveal";
 import Hero from "@/components/organisms/Hero";
 import Categories from "@/components/organisms/Categories";

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Seo from "@/components/atoms/Seo";
+import Seo from "@/components/layouts/Seo";
 import Reveal from "@/components/atoms/Reveal";
 import PageHeader from "@/components/molecules/PageHeader";
 import FaqList from "@/components/organisms/FaqList";

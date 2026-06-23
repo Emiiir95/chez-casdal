@@ -12,14 +12,14 @@ function formatPrice(price: number) {
 
 export default function MenuItemCard({ item }: MenuItemCardProps) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-charbon-800/70 bg-charbon-800 text-creme-50 shadow-deep transition-all duration-300 hover:-translate-y-1 hover:border-flamme-500/60">
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-charbon-900">
+    <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-charbon-800/70 bg-charbon-800 text-creme-50 shadow-deep transition-all duration-300 hover:-translate-y-1 border-flamme-500/60">
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-black p-4">
         <Image
           src={item.image || PLACEHOLDER_IMAGE}
           alt={item.name}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-contain transition-transform duration-500 group-hover:scale-105"
         />
         {item.tags && item.tags.length > 0 && (
           <div className="absolute left-3 top-3 flex flex-wrap gap-1.5">
@@ -55,7 +55,9 @@ export default function MenuItemCard({ item }: MenuItemCardProps) {
         <div className="mt-auto pt-4">
           {item.priceMenu !== undefined && item.priceAlone !== undefined ? (
             <div className="flex items-center gap-2">
-              <span className="price-tag">Menu {formatPrice(item.priceMenu)}</span>
+              <span className="price-tag">
+                Menu {formatPrice(item.priceMenu)}
+              </span>
               <span className="price-tag-ghost">
                 Seul {formatPrice(item.priceAlone)}
               </span>

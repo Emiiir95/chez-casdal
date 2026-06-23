@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { Inter, Bebas_Neue } from "next/font/google";
+import { Inter, Bebas_Neue, Pacifico } from "next/font/google";
 import Header from "@/components/organisms/Header";
 import Footer from "@/components/organisms/Footer";
 
@@ -17,10 +17,17 @@ const bebas = Bebas_Neue({
   display: "swap",
 });
 
+const pacifico = Pacifico({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-pacifico",
+  display: "swap",
+});
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div
-      className={`${inter.variable} ${bebas.variable} flex min-h-screen flex-col font-sans`}
+      className={`${inter.variable} ${bebas.variable} ${pacifico.variable} flex min-h-screen flex-col font-sans`}
     >
       <a
         href="#contenu"

@@ -1,4 +1,4 @@
-import Seo from "@/components/atoms/Seo";
+import Seo from "@/components/layouts/Seo";
 import PageHeader from "@/components/molecules/PageHeader";
 import AboutHistory from "@/components/organisms/AboutHistory";
 import AboutValues from "@/components/organisms/AboutValues";

@@ -57,6 +57,7 @@ export const MENU: MenuCategory[] = [
         ],
         priceMenu: 5.6,
         priceAlone: 5,
+        image: "/images/menu/burgers/cheese.webp",
       },
       {
         id: "double-cheese",
@@ -71,6 +72,7 @@ export const MENU: MenuCategory[] = [
         ],
         priceMenu: 6.5,
         priceAlone: 6,
+        image: "/images/menu/burgers/double_cheese.webp",
       },
       {
         id: "triple-cheese",
@@ -85,6 +87,7 @@ export const MENU: MenuCategory[] = [
         ],
         priceMenu: 7.5,
         priceAlone: 7,
+        image: "/images/menu/burgers/triple_cheese.webp",
       },
       {
         id: "le-big",
@@ -100,6 +103,7 @@ export const MENU: MenuCategory[] = [
         priceMenu: 7.5,
         priceAlone: 7,
         tags: ["best"],
+        image: "/images/menu/burgers/le_big.webp",
       },
       {
         id: "giant",
@@ -113,6 +117,7 @@ export const MENU: MenuCategory[] = [
         ],
         priceMenu: 7.5,
         priceAlone: 7,
+        image: "/images/menu/burgers/giant.webp",
       },
       {
         id: "kiri",
@@ -126,6 +131,7 @@ export const MENU: MenuCategory[] = [
         ],
         priceMenu: 7.5,
         priceAlone: 7,
+        image: "/images/menu/burgers/kiri.webp",
       },
       {
         id: "le-180",
@@ -133,6 +139,7 @@ export const MENU: MenuCategory[] = [
         ingredients: ["Steak 180g", "Cheddar", "Sauces et crudités au choix"],
         priceMenu: 9,
         priceAlone: 8.5,
+        image: "/images/menu/burgers/le_180.webp",
       },
       {
         id: "le-monster",
@@ -148,6 +155,7 @@ export const MENU: MenuCategory[] = [
         priceMenu: 12,
         priceAlone: 10.5,
         tags: ["best"],
+        image: "/images/menu/burgers/le_monster.webp",
       },
       {
         id: "le-360",
@@ -155,6 +163,7 @@ export const MENU: MenuCategory[] = [
         ingredients: ["Steak 360g", "Cheddar", "Sauces et crudités au choix"],
         priceMenu: 12,
         priceAlone: 10.5,
+        image: "/images/menu/burgers/le_360.webp",
       },
     ],
   },
@@ -174,6 +183,7 @@ export const MENU: MenuCategory[] = [
         ],
         priceMenu: 7.5,
         priceAlone: 7,
+        image: "/images/menu/chicken%20burger/chicken_burger.webp",
       },
     ],
   },
@@ -189,6 +199,7 @@ export const MENU: MenuCategory[] = [
         ingredients: ["Chicken tandoorie", "Sauces et crudités au choix"],
         priceMenu: 10,
         priceAlone: 9.5,
+        image: "/images/menu/sandwichs/le_rouge.webp",
       },
       {
         id: "curry",
@@ -196,6 +207,7 @@ export const MENU: MenuCategory[] = [
         ingredients: ["Chicken curry", "Sauces et crudités au choix"],
         priceMenu: 10,
         priceAlone: 9.5,
+        image: "/images/menu/sandwichs/curry.webp",
       },
       {
         id: "trio",
@@ -203,6 +215,7 @@ export const MENU: MenuCategory[] = [
         ingredients: ["3 steaks", "3 cheddars", "Sauces et crudités au choix"],
         priceMenu: 8.5,
         priceAlone: 8,
+        image: "/images/menu/sandwichs/trio.webp",
       },
       {
         id: "quattro",
@@ -210,6 +223,7 @@ export const MENU: MenuCategory[] = [
         ingredients: ["4 steaks", "4 cheddars", "Sauces et crudités au choix"],
         priceMenu: 9.5,
         priceAlone: 9,
+        image: "/images/menu/sandwichs/quattro.webp",
       },
       {
         id: "mixte",
@@ -220,6 +234,7 @@ export const MENU: MenuCategory[] = [
         ],
         priceMenu: 10.5,
         priceAlone: 9.5,
+        image: "/images/menu/sandwichs/mixte.webp",
       },
       {
         id: "extreme",
@@ -233,6 +248,7 @@ export const MENU: MenuCategory[] = [
         ],
         priceMenu: 10.5,
         priceAlone: 9.5,
+        image: "/images/menu/sandwichs/extreme.webp",
       },
       {
         id: "phenomene",
@@ -245,6 +261,7 @@ export const MENU: MenuCategory[] = [
         ],
         priceMenu: 10.5,
         priceAlone: 9.5,
+        image: "/images/menu/sandwichs/phenomene.webp",
       },
       {
         id: "steak-boursin",
@@ -258,6 +275,7 @@ export const MENU: MenuCategory[] = [
         ],
         priceMenu: 9.5,
         priceAlone: 9,
+        image: "/images/menu/sandwichs/steak_boursin.webp",
       },
       {
         id: "le-balaize",
@@ -272,6 +290,7 @@ export const MENU: MenuCategory[] = [
         priceMenu: 10.5,
         priceAlone: 9.5,
         tags: ["best"],
+        image: "/images/menu/sandwichs/le_balaize.webp",
       },
     ],
   },
@@ -287,16 +306,25 @@ export const MENU: MenuCategory[] = [
           { label: "8 pièces", price: 5.5 },
           { label: "16 pièces", price: 10 },
         ],
+        image: "/images/starters/nugget.webp",
       },
       {
         id: "calamar-frit",
         name: "Calamar frit",
         variants: [{ label: "10 pièces", price: 5 }],
+        image: "/images/starters/calamar_frit.webp",
       },
       {
         id: "chili-cheese",
         name: "Chili Cheese",
         variants: [{ label: "5 pièces", price: 5.5 }],
+        image: "/images/starters/chili_cheese.webp",
+      },
+      {
+        id: "mozza-stick",
+        name: "Mozza Stick",
+        variants: [{ label: "6 pièces", price: 5 }],
+        image: "/images/starters/mozza_sick.webp",
       },
     ],
   },
@@ -305,17 +333,72 @@ export const MENU: MenuCategory[] = [
     name: "Boissons",
     description: "Toutes nos boissons à 1,50€ (sauf Cristaline 1€).",
     items: [
-      { id: "coca", name: "Coca-Cola", price: 1.5 },
-      { id: "coca-cherry", name: "Coca Cherry", price: 1.5 },
-      { id: "coca-zero", name: "Coca Zéro", price: 1.5 },
-      { id: "oasis-tropical", name: "Oasis Tropical", price: 1.5 },
-      { id: "oasis-fraise", name: "Oasis Fraise Framboise", price: 1.5 },
-      { id: "oasis-pomme", name: "Oasis Pomme Poire", price: 1.5 },
-      { id: "fanta-orange", name: "Fanta Orange", price: 1.5 },
-      { id: "fanta-citron", name: "Fanta Citron", price: 1.5 },
-      { id: "perrier", name: "Perrier", price: 1.5 },
-      { id: "ice-tea", name: "Ice Tea", price: 1.5 },
-      { id: "cristaline", name: "Cristaline", price: 1 },
+      {
+        id: "coca",
+        name: "Coca-Cola",
+        price: 1.5,
+        image: "/images/boissons/coca.webp",
+      },
+      {
+        id: "coca-cherry",
+        name: "Coca Cherry",
+        price: 1.5,
+        image: "/images/boissons/coca_cherry.webp",
+      },
+      {
+        id: "coca-zero",
+        name: "Coca Zéro",
+        price: 1.5,
+        image: "/images/boissons/coca_z%C3%A9ro.webp",
+      },
+      {
+        id: "oasis-tropical",
+        name: "Oasis Tropical",
+        price: 1.5,
+        image: "/images/boissons/oasis_tropical.webp",
+      },
+      {
+        id: "oasis-fraise",
+        name: "Oasis Fraise Framboise",
+        price: 1.5,
+        image: "/images/boissons/oasis_fraise_framboise.webp",
+      },
+      {
+        id: "oasis-pomme",
+        name: "Oasis Pomme Poire",
+        price: 1.5,
+        image: "/images/boissons/oasis_pomme_poire.webp",
+      },
+      {
+        id: "fanta-orange",
+        name: "Fanta Orange",
+        price: 1.5,
+        image: "/images/boissons/fanta_orange.webp",
+      },
+      {
+        id: "fanta-citron",
+        name: "Fanta Citron",
+        price: 1.5,
+        image: "/images/boissons/fanta_citron.webp",
+      },
+      {
+        id: "perrier",
+        name: "Perrier",
+        price: 1.5,
+        image: "/images/boissons/perrier.webp",
+      },
+      {
+        id: "ice-tea",
+        name: "Ice Tea",
+        price: 1.5,
+        image: "/images/boissons/ice_tea.webp",
+      },
+      {
+        id: "cristaline",
+        name: "Cristaline",
+        price: 1,
+        image: "/images/boissons/cristaline.webp",
+      },
     ],
   },
   {
@@ -323,8 +406,24 @@ export const MENU: MenuCategory[] = [
     name: "Desserts",
     description: "Pour finir sur une note sucrée.",
     items: [
-      { id: "tarte-daims", name: "Tarte au Daims", price: 3 },
-      { id: "tiramisu", name: "Tiramisu chocolat / caramel", price: 3.5 },
+      {
+        id: "tarte-daims",
+        name: "Tarte au Daims",
+        price: 3,
+        image: "/images/desserts/tarte_au_daim.webp",
+      },
+      {
+        id: "tiramisu-chocolat",
+        name: "Tiramisu chocolat",
+        price: 3.5,
+        image: "/images/desserts/tiramisu_chocolat.webp",
+      },
+      {
+        id: "tiramisu-caramel",
+        name: "Tiramisu caramel",
+        price: 3.5,
+        image: "/images/desserts/tiramisu_caramel.webp",
+      },
     ],
   },
 ];

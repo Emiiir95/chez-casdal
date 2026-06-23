@@ -29,7 +29,7 @@ export default function MenuPreview() {
   };
 
   return (
-    <section className="bg-charbon-900 py-20">
+    <section className="bg-charbon-900 pt-20 pb-10">
       <Container>
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <SectionTitle
