@@ -27,7 +27,6 @@ export const DELIVERY_ZONES: DeliveryZone[] = [
 /** Spécialités mises en avant pour les liens SEO par ville. */
 export const DELIVERY_SPECIALITIES = [
   { label: "Burger", anchor: "burgers" },
-  { label: "Chicken", anchor: "chicken" },
   { label: "Sandwich", anchor: "sandwich" },
   { label: "Starters", anchor: "starters" },
 ] as const;

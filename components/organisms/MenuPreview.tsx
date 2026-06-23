@@ -10,12 +10,9 @@ import SectionTitle from "@/components/atoms/SectionTitle";
 import MenuItemCard from "@/components/molecules/MenuItemCard";
 import { MENU } from "@/data/menu";
 
-/** Affiche un aperçu d'items vedettes sur la home. */
-const FEATURED_IDS = ["le-monster", "le-balaize", "chicken-burger"];
-
 export default function MenuPreview() {
   const featured = MENU.flatMap((c) => c.items).filter((i) =>
-    FEATURED_IDS.includes(i.id),
+    i.tags?.includes("best"),
   );
 
   const scrollerRef = useRef<HTMLDivElement>(null);

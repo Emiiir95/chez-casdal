@@ -102,7 +102,6 @@ export const MENU: MenuCategory[] = [
         ],
         priceMenu: 7.5,
         priceAlone: 7,
-        tags: ["best"],
         image: "/images/menu/burgers/le_big.webp",
       },
       {
@@ -165,13 +164,6 @@ export const MENU: MenuCategory[] = [
         priceAlone: 10.5,
         image: "/images/menu/burgers/le_360.webp",
       },
-    ],
-  },
-  {
-    id: "chicken",
-    name: "Chicken",
-    description: "Pour les amateurs de poulet pané maison.",
-    items: [
       {
         id: "chicken-burger",
         name: "Chicken Burger",
@@ -199,6 +191,7 @@ export const MENU: MenuCategory[] = [
         ingredients: ["Chicken tandoorie", "Sauces et crudités au choix"],
         priceMenu: 10,
         priceAlone: 9.5,
+        tags: ["best"],
         image: "/images/menu/sandwichs/le_rouge.webp",
       },
       {

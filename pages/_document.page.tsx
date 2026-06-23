@@ -42,8 +42,8 @@ export default function Document() {
   return (
     <Html lang="fr" data-scroll-behavior="smooth">
       <Head>
-        <link rel="icon" href={SITE.logo} />
-        <link rel="apple-touch-icon" href={SITE.logo} />
+        <link rel="icon" type="image/png" href="/images/favicon.png" />
+        <link rel="apple-touch-icon" href="/images/favicon.png" />
         <meta
           name="keywords"
           content="fast-food, burger, sandwich, chicken, Saint-Ouen-l'Aumône, Pontoise, Cergy, livraison, Chez Casdal"
