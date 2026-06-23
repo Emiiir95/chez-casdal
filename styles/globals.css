@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-creme-50 text-charbon-800 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-charbon-900;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-flamme-500 ring-offset-2 rounded-md;
+  }
+}
+
+@layer components {
+  .container-base {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .price-tag {
+    @apply inline-flex items-center justify-center rounded-md bg-flamme-500 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-white shadow-sm;
+  }
+
+  .price-tag-ghost {
+    @apply inline-flex items-center gap-1.5 rounded-md border border-flamme-500/40 bg-charbon-900/40 px-2.5 py-1 text-xs font-semibold text-flamme-300;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f1f1f"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#g)"/>
+  <circle cx="200" cy="150" r="60" fill="none" stroke="#ff6b1a" stroke-width="3"/>
+  <text x="200" y="158" text-anchor="middle" font-family="Impact, sans-serif" font-size="22" fill="#ff6b1a" letter-spacing="3">CASDAL</text>
+  <text x="200" y="232" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#ffffff" opacity="0.6" letter-spacing="4">PHOTO À VENIR</text>
+</svg>
