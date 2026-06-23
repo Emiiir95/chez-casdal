@@ -26,12 +26,14 @@ export default function Banner() {
           </span>
           <h2 className="mt-6 font-display text-4xl leading-tight tracking-wide text-white sm:text-5xl lg:text-6xl">
             Commandez en un appel, <br />
-            <span className="text-flamme-500">livré chez vous en un éclair.</span>
+            <span className="text-flamme-500">
+              livré chez vous en un éclair.
+            </span>
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-creme-100/85">
             Un coup de fil, et on s&apos;occupe du reste. Burgers, sandwichs et
-            chicken préparés à la minute, livrés chauds à Saint-Ouen-l&apos;Aumône,
-            Pontoise, Cergy et alentours.
+            chicken préparés à la minute, livrés chauds à
+            Saint-Ouen-l&apos;Aumône, Pontoise, Cergy et alentours.
           </p>
           <div className="mt-8">
             <Button href={`tel:${SITE.phoneTel}`} size="lg">

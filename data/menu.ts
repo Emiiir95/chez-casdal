@@ -24,7 +24,7 @@ export type MenuItem = {
   /** Variantes de prix (ex : 8 pièces 5,50€ / 16 pièces 10€) */
   variants?: { label: string; price: number }[];
   image?: string;
-  tags?: ("nouveau" | "best" | "épicé" | "halal")[];
+  tags?: ("nouveau" | "best" | "épicé")[];
 };
 
 export type MenuCategory = {
@@ -42,33 +42,61 @@ export const MENU: MenuCategory[] = [
   {
     id: "burgers",
     name: "Burgers",
-    description: "Pain brioché, steak haché 100% halal et cheddar fondant.",
+    description: "Pain brioché, steak haché et cheddar fondant.",
     items: [
       {
         id: "cheese",
         name: "Cheese",
-        ingredients: ["Steak 45g", "Cheddar", "Oignons", "Cornichon", "Ketchup", "Moutarde"],
+        ingredients: [
+          "Steak 45g",
+          "Cheddar",
+          "Oignons",
+          "Cornichon",
+          "Ketchup",
+          "Moutarde",
+        ],
         priceMenu: 5.6,
         priceAlone: 5,
       },
       {
         id: "double-cheese",
         name: "Double Cheese",
-        ingredients: ["2 steaks 45g", "Cheddar", "Oignons", "Cornichon", "Ketchup", "Moutarde"],
+        ingredients: [
+          "2 steaks 45g",
+          "Cheddar",
+          "Oignons",
+          "Cornichon",
+          "Ketchup",
+          "Moutarde",
+        ],
         priceMenu: 6.5,
         priceAlone: 6,
       },
       {
         id: "triple-cheese",
         name: "Triple Cheese",
-        ingredients: ["3 steaks 45g", "Cheddar", "Oignons", "Cornichon", "Ketchup", "Moutarde"],
+        ingredients: [
+          "3 steaks 45g",
+          "Cheddar",
+          "Oignons",
+          "Cornichon",
+          "Ketchup",
+          "Moutarde",
+        ],
         priceMenu: 7.5,
         priceAlone: 7,
       },
       {
         id: "le-big",
         name: "Le Big",
-        ingredients: ["2 steaks 45g", "Salade", "Oignons", "Cornichons", "Cheddar", "Sauce Biggy"],
+        ingredients: [
+          "2 steaks 45g",
+          "Salade",
+          "Oignons",
+          "Cornichons",
+          "Cheddar",
+          "Sauce Biggy",
+        ],
         priceMenu: 7.5,
         priceAlone: 7,
         tags: ["best"],
@@ -76,14 +104,26 @@ export const MENU: MenuCategory[] = [
       {
         id: "giant",
         name: "Giant",
-        ingredients: ["2 steaks 45g", "Salade", "Oignons", "Cheddar", "Sauce Giant"],
+        ingredients: [
+          "2 steaks 45g",
+          "Salade",
+          "Oignons",
+          "Cheddar",
+          "Sauce Giant",
+        ],
         priceMenu: 7.5,
         priceAlone: 7,
       },
       {
         id: "kiri",
         name: "Kiri",
-        ingredients: ["2 steaks 45g", "Salade", "Kiri", "Cheddar", "Sauce mayo"],
+        ingredients: [
+          "2 steaks 45g",
+          "Salade",
+          "Kiri",
+          "Cheddar",
+          "Sauce mayo",
+        ],
         priceMenu: 7.5,
         priceAlone: 7,
       },
@@ -126,7 +166,12 @@ export const MENU: MenuCategory[] = [
       {
         id: "chicken-burger",
         name: "Chicken Burger",
-        ingredients: ["Poulet pané", "Salade", "Sauce chicken", "Sauce cheddar"],
+        ingredients: [
+          "Poulet pané",
+          "Salade",
+          "Sauce chicken",
+          "Sauce cheddar",
+        ],
         priceMenu: 7.5,
         priceAlone: 7,
       },
@@ -169,7 +214,10 @@ export const MENU: MenuCategory[] = [
       {
         id: "mixte",
         name: "Mixte",
-        ingredients: ["Chicken tandoorie & curry", "Sauces et crudités au choix"],
+        ingredients: [
+          "Chicken tandoorie & curry",
+          "Sauces et crudités au choix",
+        ],
         priceMenu: 10.5,
         priceAlone: 9.5,
       },
@@ -189,14 +237,25 @@ export const MENU: MenuCategory[] = [
       {
         id: "phenomene",
         name: "Phénomène",
-        ingredients: ["2 steaks", "Cordon bleu", "Cheddar", "Sauces et crudités au choix"],
+        ingredients: [
+          "2 steaks",
+          "Cordon bleu",
+          "Cheddar",
+          "Sauces et crudités au choix",
+        ],
         priceMenu: 10.5,
         priceAlone: 9.5,
       },
       {
         id: "steak-boursin",
         name: "Steak Boursin",
-        ingredients: ["2 steaks", "Œuf", "Boursin", "Cheddar", "Sauces et crudités au choix"],
+        ingredients: [
+          "2 steaks",
+          "Œuf",
+          "Boursin",
+          "Cheddar",
+          "Sauces et crudités au choix",
+        ],
         priceMenu: 9.5,
         priceAlone: 9,
       },

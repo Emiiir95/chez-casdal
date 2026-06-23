@@ -44,11 +44,6 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
     title: "Notre carte",
     items: [
       {
-        question: "Tout est-il halal ?",
-        answer:
-          "Oui. Toutes nos viandes (steaks, poulet, bacon de dinde, cordon bleu) sont 100% halal et certifiées.",
-      },
-      {
         question: "Avez-vous des options sans viande ?",
         answer:
           "Notre carte est principalement orientée burgers, sandwichs et chicken. Nous proposons des starters (calamar frit, chili cheese) et des desserts. Pour toute demande particulière, n'hésitez pas à nous appeler.",

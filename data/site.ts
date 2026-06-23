@@ -7,14 +7,14 @@ export const SITE = {
   name: "Chez Casdal",
   slogan: "Quand t'as la dalle, pense Casdal !",
   shortMission:
-    "Fast-food halal à Saint-Ouen-l'Aumône : burgers, sandwichs, chicken, starters et desserts. Sur place, à emporter ou en livraison rapide.",
+    "Fast-food à Saint-Ouen-l'Aumône : burgers, sandwichs, chicken, starters et desserts. Sur place, à emporter ou en livraison rapide.",
   url: "https://www.chez-casdal.fr",
   logo: "/images/logo_chez_casdal.png",
   email: "contact@chez-casdal.fr",
   phone: "09 82 31 48 06",
   phoneTel: "+33982314806",
   address: {
-    street: "27 avenue des Béthunes",
+    street: "Chez Casdal, 27 Av. des Béthunes 72",
     zip: "95310",
     city: "Saint-Ouen-l'Aumône",
     country: "France",
@@ -37,10 +37,13 @@ export const SITE = {
     deliveroo: "https://deliveroo.fr/",
   },
   instagram: {
-    handle: "@chezcasdal",
-    url: "https://www.instagram.com/chezcasdal",
+    handle: "casdal953",
+    url: "https://www.instagram.com/casdal953",
   },
-  halal: true,
+  snapchat: {
+    handle: "casdal953",
+    url: "https://www.snapchat.com/add/casdal953",
+  },
 } as const;
 
 /** Liens de navigation principaux (header + footer). */

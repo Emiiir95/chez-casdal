@@ -23,33 +23,33 @@ const CATEGORIES: Category[] = [
   {
     id: "burgers",
     name: "Burgers",
-    description: "Pain brioché, steak halal, cheddar fondant.",
+    description: "Pain brioché, steak fondant, cheddar généreux.",
     Icon: Burger,
   },
-  {
-    id: "chicken",
-    name: "Chicken",
-    description: "Tendres et croustillants à souhait.",
-    Icon: Drumstick,
-  },
+  // {
+  //   id: "chicken",
+  //   name: "Chicken",
+  //   description: "Tendres et croustillants à souhait.",
+  //   Icon: Drumstick,
+  // },
   {
     id: "sandwich",
     name: "Sandwichs",
     description: "Tassots, kebabs et galettes XXL.",
     Icon: Bread,
   },
-  {
-    id: "starters",
-    name: "Starters",
-    description: "Nuggets, calamars, chili cheese et plus.",
-    Icon: Pepper,
-  },
-  {
-    id: "boissons",
-    name: "Boissons",
-    description: "Sodas, eaux et boissons fraîches.",
-    Icon: Mug,
-  },
+  // {
+  //   id: "starters",
+  //   name: "Starters",
+  //   description: "Nuggets, calamars, chili cheese et plus.",
+  //   Icon: Pepper,
+  // },
+  // {
+  //   id: "boissons",
+  //   name: "Boissons",
+  //   description: "Sodas, eaux et boissons fraîches.",
+  //   Icon: Mug,
+  // },
   {
     id: "desserts",
     name: "Desserts",

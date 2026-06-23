@@ -7,12 +7,12 @@ export default function MenuPage() {
   return (
     <Seo
       title="Notre menu"
-      description="Découvrez la carte de Chez Casdal : burgers, chicken, sandwichs, starters, boissons et desserts. 100% halal, à emporter ou en livraison."
+      description="Découvrez la carte de Chez Casdal : burgers, chicken, sandwichs, starters, boissons et desserts. À emporter ou en livraison."
     >
       <PageHeader
         eyebrow="Notre carte"
         title="Le menu Casdal"
-        subtitle="Burgers, sandwichs, chicken, starters, boissons et desserts. Tout est préparé à la commande, 100% halal."
+        subtitle="Burgers, sandwichs, chicken, starters, boissons et desserts. Tout est préparé à la commande."
       />
       <MenuSection />
       <CTASection

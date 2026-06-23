@@ -4,55 +4,52 @@ import MenuItemCard from "@/components/molecules/MenuItemCard";
 import MenuCategoryNav from "@/components/molecules/MenuCategoryNav";
 import { MENU } from "@/data/menu";
 
+const ALL_ID = "all";
+
 export default function MenuSection() {
-  const [activeId, setActiveId] = useState<string>(MENU[0]?.id ?? "");
+  const [activeId, setActiveId] = useState<string>(ALL_ID);
 
-  // Met à jour la catégorie active en fonction du scroll
   useEffect(() => {
-    const handler = () => {
-      const positions = MENU.map((cat) => {
-        const el = document.getElementById(`cat-${cat.id}`);
-        if (!el) return { id: cat.id, top: Number.POSITIVE_INFINITY };
-        const rect = el.getBoundingClientRect();
-        return { id: cat.id, top: rect.top };
-      });
-      // Catégorie dont le haut est juste passé sous l'offset (180px sticky header + nav)
-      const offset = 200;
-      const current =
-        positions
-          .filter((p) => p.top - offset <= 0)
-          .sort((a, b) => b.top - a.top)[0] ?? positions[0];
-      if (current && current.id !== activeId) setActiveId(current.id);
+    const fromHash = () => {
+      const hash = window.location.hash.replace("#cat-", "");
+      if (hash && MENU.some((c) => c.id === hash)) setActiveId(hash);
     };
-    window.addEventListener("scroll", handler, { passive: true });
-    handler();
-    return () => window.removeEventListener("scroll", handler);
-  }, [activeId]);
+    fromHash();
+    window.addEventListener("hashchange", fromHash);
+    return () => window.removeEventListener("hashchange", fromHash);
+  }, []);
 
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(`cat-${id}`);
-    if (!el) return;
-    const y = el.getBoundingClientRect().top + window.scrollY - 140;
-    window.scrollTo({ top: y, behavior: "smooth" });
+  const visible =
+    activeId === ALL_ID ? MENU : MENU.filter((c) => c.id === activeId);
+
+  const handleSelect = (id: string) => {
+    setActiveId(id);
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   return (
-    <section className="bg-charbon-900 pb-24">
+    <div className="bg-charbon-900">
       <Container className="pt-8">
         <MenuCategoryNav
-          categories={[...MENU]}
+          categories={[{ id: ALL_ID, name: "Tout", items: [] }, ...MENU]}
           activeId={activeId}
-          onSelect={scrollTo}
+          onSelect={handleSelect}
         />
+      </Container>
 
-        <div className="mt-12 space-y-20">
-          {MENU.map((category) => (
-            <section
-              key={category.id}
-              id={`cat-${category.id}`}
-              aria-labelledby={`cat-${category.id}-title`}
-              className="scroll-mt-40"
-            >
+      <div className="mt-12">
+        {visible.map((category, idx) => (
+          <section
+            key={category.id}
+            id={`cat-${category.id}`}
+            aria-labelledby={`cat-${category.id}-title`}
+            className={`scroll-mt-40  py-16 ${
+              idx % 2 === 0 ? "bg-[#0a0a0a]" : "bg-[#141618]"
+            }`}
+          >
+            <Container>
               <header className="mb-8">
                 <h2
                   id={`cat-${category.id}-title`}
@@ -77,10 +74,10 @@ export default function MenuSection() {
                   <MenuItemCard key={item.id} item={item} />
                 ))}
               </div>
-            </section>
-          ))}
-        </div>
-      </Container>
-    </section>
+            </Container>
+          </section>
+        ))}
+      </div>
+    </div>
   );
 }

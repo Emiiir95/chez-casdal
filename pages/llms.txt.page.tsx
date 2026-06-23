@@ -25,7 +25,7 @@ function buildLlmsTxt(baseUrl: string): string {
 
 > ${SITE.shortMission}
 
-${SITE.name} est un fast-food halal situé à ${SITE.address.city}. Spécialités : burgers, sandwichs, chicken, starters, desserts.
+${SITE.name} est un fast-food situé à ${SITE.address.city}. Spécialités : burgers, sandwichs, chicken, starters, desserts.
 
 ## Coordonnées
 

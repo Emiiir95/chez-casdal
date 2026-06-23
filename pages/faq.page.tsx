@@ -25,7 +25,7 @@ export default function FaqPage() {
   return (
     <Seo
       title="Questions fréquentes"
-      description="Commande, livraison, halal, horaires, sur place : toutes les réponses aux questions fréquentes sur Chez Casdal."
+      description="Commande, livraison, horaires, sur place : toutes les réponses aux questions fréquentes sur Chez Casdal."
     >
       <Head>
         <script
@@ -37,19 +37,15 @@ export default function FaqPage() {
       <PageHeader
         eyebrow="FAQ"
         title="Vos questions, nos réponses"
-        subtitle="Commande, livraison, halal, horaires : on a regroupé ici les questions qu'on nous pose le plus souvent."
+        subtitle="Commande, livraison, horaires : on a regroupé ici les questions qu'on nous pose le plus souvent."
       />
 
-      <Reveal>
-        <FaqList categories={FAQ_CATEGORIES} />
-      </Reveal>
+      <FaqList categories={FAQ_CATEGORIES} />
 
-      <Reveal>
-        <CTASection
-          title="Vous ne trouvez pas votre réponse ?"
-          text="Appelez-nous ou écrivez via le formulaire de contact, on revient vers vous rapidement."
-        />
-      </Reveal>
+      <CTASection
+        title="Vous ne trouvez pas votre réponse ?"
+        text="Appelez-nous ou écrivez via le formulaire de contact, on revient vers vous rapidement."
+      />
     </Seo>
   );
 }

@@ -12,7 +12,7 @@ const restaurantJsonLd = {
   image: `${SITE.url}${SITE.logo}`,
   telephone: SITE.phoneTel,
   email: SITE.email,
-  servesCuisine: ["Burgers", "Sandwichs", "Fast-food halal"],
+  servesCuisine: ["Burgers", "Sandwichs", "Fast-food"],
   priceRange: "€",
   address: {
     "@type": "PostalAddress",
@@ -46,7 +46,7 @@ export default function Document() {
         <link rel="apple-touch-icon" href={SITE.logo} />
         <meta
           name="keywords"
-          content="fast-food halal, burger, sandwich, chicken, Saint-Ouen-l'Aumône, Pontoise, Cergy, livraison, Chez Casdal"
+          content="fast-food, burger, sandwich, chicken, Saint-Ouen-l'Aumône, Pontoise, Cergy, livraison, Chez Casdal"
         />
         <meta name="theme-color" content="#0a0a0a" />
         <meta property="og:locale" content="fr_FR" />

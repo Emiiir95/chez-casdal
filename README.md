@@ -1,6 +1,6 @@
 # Chez Casdal — Site vitrine
 
-Site vitrine du fast-food halal **Chez Casdal** (Saint-Ouen-l'Aumône).
+Site vitrine du fast-food **Chez Casdal** (Saint-Ouen-l'Aumône).
 100 % statique, Next.js + Tailwind. Tout le contenu est centralisé dans `data/`.
 
 ## Démarrer

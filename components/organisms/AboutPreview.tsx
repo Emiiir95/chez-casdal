@@ -23,13 +23,13 @@ export default function AboutPreview() {
           <SectionTitle
             align="left"
             eyebrow="Notre maison"
-            title="Du bon, du généreux, du halal."
+            title="Du bon, du généreux."
           />
           <p className="mt-6 text-lg leading-relaxed text-charbon-600">
             Chez Casdal, c&apos;est le fast-food de quartier qu&apos;on aurait
             tous voulu à deux pas de chez soi. Burgers maison, sandwichs XXL,
-            chicken croustillant&nbsp;: tout est préparé à la commande, avec de
-            la viande 100% halal et des produits frais.
+            chicken croustillant&nbsp;: tout est préparé à la commande, avec
+            des produits frais.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-charbon-600">
             Ouvert du mardi au dimanche, jusqu&apos;à 4h le week-end. Sur place,

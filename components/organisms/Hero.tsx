@@ -3,7 +3,7 @@ import {
   FaArrowRight as ArrowRight,
   FaPhone as Phone,
   FaUtensils as Utensils,
-  FaBowlFood as Halal,
+  FaBowlFood,
 } from "react-icons/fa6";
 import Container from "@/components/atoms/Container";
 import Button from "@/components/atoms/Button";
@@ -19,7 +19,7 @@ export default function Hero() {
         fill
         priority
         sizes="100vw"
-        className="absolute inset-0 -z-10 object-cover"
+        className="absolute inset-0 -z-10 object-cover object-[30%_center] sm:object-center"
       />
       <div
         aria-hidden="true"
@@ -28,7 +28,8 @@ export default function Hero() {
       <Container className="relative py-28 md:py-36 lg:py-44">
         <div className="max-w-2xl animate-fade-up text-creme-50">
           <span className="inline-flex items-center gap-2 rounded-full border border-flamme-500/40 bg-flamme-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-flamme-400">
-            <Halal className="h-3 w-3" /> Fast-food · Saint-Ouen-l&apos;Aumône
+            <FaBowlFood className="h-3 w-3" /> Fast-food ·
+            Saint-Ouen-l&apos;Aumône
             <h3></h3>
           </span>
 

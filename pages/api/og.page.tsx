@@ -49,7 +49,7 @@ export default async function handler(req: Request) {
               textTransform: "uppercase",
             }}
           >
-            Fast-food halal · Saint-Ouen-l&apos;Aumône
+            Fast-food · Saint-Ouen-l&apos;Aumône
           </div>
           <div
             style={{

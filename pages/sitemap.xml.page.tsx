@@ -1,5 +1,6 @@
 import type { GetServerSideProps } from "next";
 import { SITE } from "@/data/site";
+import { DELIVERY_ZONES } from "@/data/delivery-zones";
 
 const ROUTES: { path: string; priority: string }[] = [
   { path: "/", priority: "1.0" },
@@ -7,6 +8,11 @@ const ROUTES: { path: string; priority: string }[] = [
   { path: "/a-propos", priority: "0.7" },
   { path: "/faq", priority: "0.6" },
   { path: "/contact", priority: "0.7" },
+  { path: "/zones-de-livraison", priority: "0.8" },
+  ...DELIVERY_ZONES.map((z) => ({
+    path: `/zones-de-livraison/${z.slug}`,
+    priority: "0.7",
+  })),
 ];
 
 function buildSitemap(baseUrl: string, lastmod: string): string {

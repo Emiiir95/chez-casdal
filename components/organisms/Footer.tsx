@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   FaInstagram as Instagram,
+  FaSnapchat as Snapchat,
   FaEnvelope as Mail,
   FaLocationDot as MapPin,
   FaPhone as Phone,
@@ -28,11 +29,6 @@ export default function Footer() {
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-creme-100/70">
               {SITE.shortMission}
             </p>
-            {SITE.halal && (
-              <span className="mt-4 inline-flex items-center gap-2 rounded-full border border-flamme-500/40 bg-flamme-500/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-flamme-400">
-                100% Halal
-              </span>
-            )}
           </div>
 
           <nav aria-label="Liens de pied de page">
@@ -50,6 +46,14 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/zones-de-livraison"
+                  className="text-sm text-creme-100/80 transition-colors hover:text-flamme-400"
+                >
+                  Zones de livraison
+                </Link>
+              </li>
             </ul>
           </nav>
 
@@ -93,6 +97,17 @@ export default function Footer() {
                 >
                   <Instagram className="h-4 w-4 shrink-0 text-flamme-400" />
                   {SITE.instagram.handle}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={SITE.snapchat.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 transition-colors hover:text-flamme-400"
+                >
+                  <Snapchat className="h-4 w-4 shrink-0 text-flamme-400" />
+                  {SITE.snapchat.handle}
                 </a>
               </li>
             </ul>

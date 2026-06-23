@@ -19,7 +19,7 @@ export default function Seo({
   const router = useRouter();
   const fullTitle = `${title} — ${SITE.name}`;
   const ogImage = `${SITE.url}/api/og`;
-  const ogImageAlt = `${SITE.name} — Fast-food halal à Saint-Ouen-l'Aumône`;
+  const ogImageAlt = `${SITE.name} — Fast-food à Saint-Ouen-l'Aumône`;
   const canonicalUrl = `${SITE.url}${router.asPath.split("?")[0].split("#")[0]}`;
 
   return (
