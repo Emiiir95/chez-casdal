@@ -15,6 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 1
 
       - uses: actions/setup-node@v4
@@ -40,6 +41,6 @@ jobs:
           else
             DATE=$(date +%Y-%m-%d)
             git commit -m "blog: nouvel article du ${DATE}"
-            git push
+            git push origin main
             echo "✅ Article commité — Vercel va redéployer automatiquement."
           fi

@@ -6,8 +6,8 @@ import CTASection from "@/components/organisms/CTASection";
 export default function MenuPage() {
   return (
     <Seo
-      title="Notre menu"
-      description="Découvrez la carte de Chez Casdal : burgers, chicken, sandwichs, starters, boissons et desserts. À emporter ou en livraison."
+      title="Menu burger, chicken & sandwich halal — la carte"
+      description="Découvrez la carte Chez Casdal : burgers maison, chicken pané, sandwichs XXL, starters, boissons et desserts. 100% halal, à emporter ou en livraison."
     >
       <PageHeader
         eyebrow="Notre carte"

@@ -9,8 +9,8 @@ import { DELIVERY_ZONES } from "@/data/delivery-zones";
 export default function ZonesDeLivraisonPage() {
   return (
     <Seo
-      title="Zones de livraison — Saint-Ouen-l'Aumône, Pontoise, Cergy"
-      description="Chez Casdal livre ses burgers, chicken et sandwichs à Saint-Ouen-l'Aumône, Pontoise, Cergy, Éragny, Méry-sur-Oise, Pierrelaye et alentours. Commandez en ligne."
+      title="Livraison burger halal — Saint-Ouen, Pontoise, Cergy"
+      description="Livraison rapide Chez Casdal dans tout le Val-d'Oise : Saint-Ouen-l'Aumône, Pontoise, Cergy, Éragny, Méry-sur-Oise, Pierrelaye. Commandez vos burgers halal."
     >
       <DeliveryZonesIntro />
       <DeliveryCitiesGrid zones={DELIVERY_ZONES} theme="dark" />

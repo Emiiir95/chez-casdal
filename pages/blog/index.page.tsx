@@ -37,8 +37,8 @@ export default function BlogPage({ posts, tags }: Props) {
 
   return (
     <Seo
-      title="Le blog Casdal"
-      description="Conseils, actualités et coulisses de Chez Casdal : burgers, livraison, fast-food à Saint-Ouen-l'Aumône et alentours."
+      title="Blog Casdal — Burger halal, fast-food & actu locale"
+      description="Le blog Chez Casdal : conseils burger, guides livraison à Saint-Ouen-l'Aumône, Pontoise, Cergy. Astuces, recettes et nouveautés du fast-food halal."
     >
       <PageHeader
         eyebrow="Blog"
