@@ -8,8 +8,8 @@ import LocationMap from "@/components/molecules/LocationMap";
 export default function ContactPage() {
   return (
     <Seo
-      title="Nous contacter"
-      description="Une question, une commande, un retour ? Contactez Chez Casdal par téléphone, par mail ou via le formulaire."
+      title="Contact, téléphone & adresse Saint-Ouen-l'Aumône"
+      description="Contactez Chez Casdal à Saint-Ouen-l'Aumône : téléphone, adresse, horaires et formulaire en ligne. Pour commander un burger halal, réserver ou nous écrire."
     >
       <PageHeader
         eyebrow="Contact"

@@ -13,8 +13,8 @@ import AboutValues from "@/components/organisms/AboutValues";
 export default function HomePage() {
   return (
     <Seo
-      title="Fast-food à Saint-Ouen-l'Aumône"
-      description="Chez Casdal : burgers, sandwichs, chicken et starters. Sur place, à emporter ou en livraison rapide à Saint-Ouen-l'Aumône, Pontoise, Cergy et alentours."
+      title="Burger halal & fast-food — Saint-Ouen-l'Aumône"
+      description="Chez Casdal, fast-food halal à Saint-Ouen-l'Aumône : burgers maison, chicken, sandwichs XXL. Livraison rapide à Pontoise, Cergy, Éragny et alentours du Val-d'Oise."
     >
       <Hero />
       <Categories />

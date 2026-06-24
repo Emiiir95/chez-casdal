@@ -32,8 +32,8 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 export default function VillePage({ zone, others }: Props) {
   return (
     <Seo
-      title={`Livraison à ${zone.city}, ${zone.zip} — burgers, chicken, sandwichs`}
-      description={`${SITE.name} livre ses burgers, chicken et sandwichs à ${zone.city} (${zone.zip}). Commandez en ligne, livraison rapide à domicile ou au bureau.`}
+      title={`Livraison burger halal à ${zone.city} (${zone.zip}) — Chez Casdal`}
+      description={`${SITE.name} livre ses burgers halal, chicken et sandwichs à ${zone.city} (${zone.zip}) : livraison rapide à domicile ou au bureau. Commandez en ligne.`}
     >
       <VilleHero zone={zone} />
       <VilleSpecialitiesSection zone={zone} />

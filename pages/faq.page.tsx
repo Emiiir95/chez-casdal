@@ -24,8 +24,8 @@ const faqJsonLd = {
 export default function FaqPage() {
   return (
     <Seo
-      title="Questions fréquentes"
-      description="Commande, livraison, horaires, sur place : toutes les réponses aux questions fréquentes sur Chez Casdal."
+      title="FAQ — Livraison, commande, horaires & halal"
+      description="Toutes les réponses sur Chez Casdal : zones de livraison, horaires, modes de commande, viande halal, paiement et tarifs à Saint-Ouen-l'Aumône, Pontoise, Cergy."
     >
       <Head>
         <script
