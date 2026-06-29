@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -8,6 +7,7 @@ import {
 } from "react-icons/fa6";
 import Container from "@/components/atoms/Container";
 import SectionTitle from "@/components/atoms/SectionTitle";
+import { useCarouselScroll } from "@/hooks/useCarouselScroll";
 
 type Category = {
   id: string;
@@ -42,15 +42,7 @@ const CATEGORIES: Category[] = [
 ];
 
 export default function Categories() {
-  const scrollerRef = useRef<HTMLDivElement>(null);
-
-  const scrollBy = (dir: 1 | -1) => {
-    const el = scrollerRef.current;
-    if (!el) return;
-    const card = el.querySelector<HTMLElement>("[data-card]");
-    const step = card ? card.offsetWidth + 20 : el.clientWidth * 0.9;
-    el.scrollBy({ left: step * dir, behavior: "smooth" });
-  };
+  const { scrollerRef, scroll, handleScroll } = useCarouselScroll();
 
   return (
     <Container as="section" className="py-20">
@@ -64,7 +56,7 @@ export default function Categories() {
         <div className="flex gap-2 sm:hidden">
           <button
             type="button"
-            onClick={() => scrollBy(-1)}
+            onClick={() => scroll(-1)}
             aria-label="Précédent"
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-charbon-200 bg-white text-flamme-500 transition-colors hover:border-flamme-500"
           >
@@ -72,7 +64,7 @@ export default function Categories() {
           </button>
           <button
             type="button"
-            onClick={() => scrollBy(1)}
+            onClick={() => scroll(1)}
             aria-label="Suivant"
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-charbon-200 bg-white text-flamme-500 transition-colors hover:border-flamme-500"
           >
@@ -83,6 +75,7 @@ export default function Categories() {
 
       <div
         ref={scrollerRef}
+        onScroll={handleScroll}
         className="-mx-4 mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3"
       >
         {CATEGORIES.map(({ id, name, description, image, imageAlt }) => (

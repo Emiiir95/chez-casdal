@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import {
   FaUtensils as Utensils,
   FaBowlFood as Bowl,
@@ -10,6 +9,7 @@ import {
 import Container from "@/components/atoms/Container";
 import SectionTitle from "@/components/atoms/SectionTitle";
 import Card from "@/components/molecules/Card";
+import { useCarouselScroll } from "@/hooks/useCarouselScroll";
 
 const VALUES = [
   {
@@ -49,15 +49,7 @@ export default function AboutValues({
   title = "Ce qui fait Casdal",
   subtitle = "Quatre engagements qui guident chaque commande.",
 }: AboutValuesProps) {
-  const scrollerRef = useRef<HTMLDivElement>(null);
-
-  const scrollBy = (dir: 1 | -1) => {
-    const el = scrollerRef.current;
-    if (!el) return;
-    const card = el.querySelector<HTMLElement>("[data-card]");
-    const step = card ? card.offsetWidth + 24 : el.clientWidth * 0.9;
-    el.scrollBy({ left: step * dir, behavior: "smooth" });
-  };
+  const { scrollerRef, scroll, handleScroll } = useCarouselScroll();
 
   return (
     <section className="bg-creme-100 pt-20 pb-10">
@@ -72,7 +64,7 @@ export default function AboutValues({
           <div className="flex gap-2 sm:hidden">
             <button
               type="button"
-              onClick={() => scrollBy(-1)}
+              onClick={() => scroll(-1)}
               aria-label="Précédent"
               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-charbon-200 bg-white text-flamme-500 transition-colors hover:border-flamme-500"
             >
@@ -80,7 +72,7 @@ export default function AboutValues({
             </button>
             <button
               type="button"
-              onClick={() => scrollBy(1)}
+              onClick={() => scroll(1)}
               aria-label="Suivant"
               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-charbon-200 bg-white text-flamme-500 transition-colors hover:border-flamme-500"
             >
@@ -91,6 +83,7 @@ export default function AboutValues({
 
         <div
           ref={scrollerRef}
+          onScroll={handleScroll}
           className="-mx-4 mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4"
         >
           {VALUES.map((value) => (

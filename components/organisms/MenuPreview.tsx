@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import Link from "next/link";
 import {
   FaArrowRight as ArrowRight,
@@ -8,6 +7,7 @@ import {
 import Container from "@/components/atoms/Container";
 import SectionTitle from "@/components/atoms/SectionTitle";
 import MenuItemCard from "@/components/molecules/MenuItemCard";
+import { useCarouselScroll } from "@/hooks/useCarouselScroll";
 import { MENU } from "@/data/menu";
 
 export default function MenuPreview() {
@@ -15,15 +15,7 @@ export default function MenuPreview() {
     i.tags?.includes("best"),
   );
 
-  const scrollerRef = useRef<HTMLDivElement>(null);
-
-  const scrollBy = (dir: 1 | -1) => {
-    const el = scrollerRef.current;
-    if (!el) return;
-    const card = el.querySelector<HTMLElement>("[data-card]");
-    const step = card ? card.offsetWidth + 24 : el.clientWidth * 0.9;
-    el.scrollBy({ left: step * dir, behavior: "smooth" });
-  };
+  const { scrollerRef, scroll, handleScroll } = useCarouselScroll();
 
   return (
     <section className="bg-charbon-900 pt-20 pb-10">
@@ -46,7 +38,7 @@ export default function MenuPreview() {
             <div className="flex gap-2 sm:hidden">
               <button
                 type="button"
-                onClick={() => scrollBy(-1)}
+                onClick={() => scroll(-1)}
                 aria-label="Précédent"
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-charbon-700 bg-charbon-800 text-flamme-500 transition-colors hover:border-flamme-500 hover:bg-charbon-700"
               >
@@ -54,7 +46,7 @@ export default function MenuPreview() {
               </button>
               <button
                 type="button"
-                onClick={() => scrollBy(1)}
+                onClick={() => scroll(1)}
                 aria-label="Suivant"
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-charbon-700 bg-charbon-800 text-flamme-500 transition-colors hover:border-flamme-500 hover:bg-charbon-700"
               >
@@ -66,6 +58,7 @@ export default function MenuPreview() {
 
         <div
           ref={scrollerRef}
+          onScroll={handleScroll}
           className="mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden sm:grid sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:pb-0 lg:grid-cols-3"
         >
           {featured.map((item) => (

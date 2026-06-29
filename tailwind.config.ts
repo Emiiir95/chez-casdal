@@ -11,6 +11,12 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./data/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  // Les effets `hover:` (cartes qui se lèvent, scale, etc.) ne s'appliquent
+  // que sur les appareils avec un vrai pointeur. Évite le hover « collé »
+  // après un tap sur mobile.
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   theme: {
     extend: {
       colors: {
